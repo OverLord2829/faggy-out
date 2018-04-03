@@ -21,10 +21,16 @@ cursor = c.cursor()
 select_statement = "SELECT urls.url from urls"
 cursor.execute(select_statement)
 results = cursor.fetchall()
-qeury_list = {}
+query_list = []
 for url in reults:
     x = parse(url)
-    if x not in querylist:
+    if x is '':
+        continue
+    elif x not in query_list:
+        query_list.insert(x)
+print (query_list)
+
+        
         
     
         
