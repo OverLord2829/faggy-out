@@ -18,7 +18,7 @@ files = os.listdir(data_path)
 history_db = os.path.join(data_path, 'history')
 c = sqlite3.connect(history_db)
 cursor = c.cursor()
-select_statement = "SELECT urls.url from urls"
+select_statement = "SELECT url from urls"
 cursor.execute(select_statement)
 results = cursor.fetchall()
 query_list = []
